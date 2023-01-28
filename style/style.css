@@ -15,10 +15,27 @@ body
 {
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
+    
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.015em;
+    font-size: 18px;
+    line-height: 1.67;
 }
+
+/* Типография заголовка */
+/* h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Comfortaa';
+} */
+
+/* Logo */
 .logo
 {
     color: var(--title-text-color);
+    font-family: 'Comfortaa', cursive;
+    font-size: 28px;
+    line-height: 1.14;
+    text-decoration: none;
 }
 .logo:hover
 {
@@ -33,6 +50,10 @@ body
 .site-nav .link
 {
     color: var(--accent-color);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    text-decoration: none;
 }
 .site-nav .link:hover,
 .site-nav .link:focus
@@ -48,31 +69,49 @@ body
 .hero-title
 {
     color: var(--title-text-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.43;
+    text-align: center;
 }
 
 /* Section */
 .section-title
 {
     color: var(--title-text-color);
+    
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.5;
+    text-align: center;
 }
 
-/* Features */
-.feature-list .title
+.section-description
 {
-    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.39;
 }
 
-/* Examples */
+/* Features и  Examples */
+.feature-list .title, 
 .work-list .title
 {
-    color: var(--title-text-color);
+    color: var(--title-text-color);  
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
 }
 
 /* Button */
 .button
 {
     color: var(--title-text-color);
-    background-color: var(--primary-white-color);
+    background-color: var(--primary-white-color);  
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    text-decoration: none;
 }
 .button.primary
 {
