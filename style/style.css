@@ -3,7 +3,17 @@
 /* белый цвет  #FFFFFF */
 /* акцент #18A0FB */
 /* вторичный цвет фона #F5F5F5 */
+html
+{
+    box-sizing: border-box;
+}
 
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+}
 :root
 {
     --primary-text-color: rgba(0, 0, 0, 0.8);
@@ -21,13 +31,13 @@ body
     font-size: 18px;
     line-height: 1.67;
 }
-
-/* Типография заголовка */
-/* h1, h2, h3, h4, h5, h6
+.container
 {
-    font-family: 'Comfortaa';
-} */
-
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    outline: 2px solid tomato;
+}
 /* Logo */
 .logo
 {
@@ -43,7 +53,15 @@ body
 }
 .list
 {
+    padding: 0;
+    margin: 0;
     list-style: none;
+}
+
+/* Page header */
+.page-header
+{
+    background-color: #ccc;
 }
 
 /* Site nav */
@@ -66,25 +84,36 @@ body
 }
 
 /* Hero */
+.hero
+{
+    text-align: center;
+}
 .hero-title
 {
+    margin-top: 0;
+
     color: var(--title-text-color);
     font-style: normal;
     font-weight: 400;
     font-size: 56px;
     line-height: 1.43;
-    text-align: center;
+
+    outline: 2px solid tomato;
 }
 
 /* Section */
 .section-title
 {
+    margin-top: 0;
+    margin-bottom: 60px;
     color: var(--title-text-color);
     
     font-weight: 400;
     font-size: 48px;
     line-height: 1.5;
     text-align: center;
+
+    background-color: tomato;
 }
 
 .section-description
@@ -106,12 +135,20 @@ body
 /* Button */
 .button
 {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 11px 34px;
+    min-width: 130px;
+
     color: var(--title-text-color);
-    background-color: var(--primary-white-color);  
+    background-color: var(--primary-white-color); 
+
     font-weight: 500;
     font-size: 15px;
     line-height: 1.2;
     text-decoration: none;
+    text-align: center;
 }
 .button.primary
 {
@@ -120,11 +157,8 @@ body
 }
 .button.secondary
 {
+    border-color: var(--accent-color);
     color: var(--accent-color);
     background-color: var(--primary-white-color);
 }
-
-.box
-{
-    
-}
+/* --------------------------------------------------------- */
