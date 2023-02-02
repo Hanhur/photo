@@ -20,6 +20,7 @@ html
     --title-text-color:  #000000;
     --accent-color: #18A0FB;
     --primary-white-color: #FFFFFF;
+    --secondery-bg-color: #F5F5F5;
 }
 body
 {
@@ -36,6 +37,8 @@ body
     margin-left: auto;
     margin-right: auto;
     width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
     outline: 2px solid tomato;
 }
 /* Logo */
@@ -102,6 +105,18 @@ body
 }
 
 /* Section */
+.section
+{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section.no-padding
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .section-title
 {
     margin-top: 0;
@@ -111,13 +126,16 @@ body
     font-weight: 400;
     font-size: 48px;
     line-height: 1.5;
+}
+.section-title.centered
+{
     text-align: center;
-
-    background-color: tomato;
 }
 
 .section-description
 {
+    margin-top: 0;
+    margin-bottom: 80px;
     font-size: 36px;
     line-height: 1.39;
 }
@@ -126,10 +144,31 @@ body
 .feature-list .title, 
 .work-list .title
 {
+    margin-top: 0;
+    margin-bottom: 24px;
     color: var(--title-text-color);  
     font-weight: 700;
     font-size: 24px;
     line-height: 1.5;
+}
+
+/* Works */
+.work-list > .item
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--primary-white-color);
+}
+
+.work-list > .item:nth-child(2n)
+{
+    background-color: var(--secondery-bg-color);
+}
+
+.feature-list p
+{
+    margin-top: 0;
+    margin-bottom: 32px;
 }
 
 /* Button */
