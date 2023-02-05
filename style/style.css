@@ -317,3 +317,38 @@ body
 {
     margin-bottom: 30px;
 } */
+/* ------------------------------------------------------- */
+.list-item::before
+{
+    display: block;
+    content: "";
+    height: 112px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ccc;
+}
+.icon-delivery::before
+{
+    background-image: url("../images/antenna.svg");
+}
+/* .list-item:nth-child(1)::before
+{
+    background-image: url("../images/antenna.png");
+} */
+.link
+{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url("../images/antenna.svg");
+    background-color: red;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+.link:hover
+{
+    background-color: teal;
+}
