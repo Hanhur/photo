@@ -194,7 +194,7 @@
         </ul>
         <p>&copy; Photo, Inc. 2019. We love our users!</p>
     </footer>
-    <ul class="list">
+    <!-- <ul class="list">
         <li class="list-item icon-delivery">
             <h2 class="title">Lorem ipsum dolor sit</h2>
             <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique autem quasi at inventore asperiores! Esse neque ut possimus veritatis.</p>
@@ -205,8 +205,8 @@
                 <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique autem quasi at inventore asperiores! Esse neque ut possimus veritatis.</p>
             </li>
             <div class="link"></div>
-    </ul>
-    <ul>
+    </ul> -->
+    <!-- <ul>
         <li>
             <button class="button">
                 <svg class="button-icon">
@@ -251,7 +251,89 @@
                 </svg>
             </a>
         </li>
-    </ul>
+    </ul> -->
+    <!-- form -->
+    <form class="form js-speaker-form">
+       <div class="form-field">
+            <label class="form-label" for="name">Имя</label>
+            <input class="form-input" type="text" name="user-name" id="name" placeholder="Иван Иванович" autofocus>
+       </div>        
+       <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="text" name="tel" id="tel">
+       </div>
+       <div class="form-field">
+            <label for="mail">Почта</label>
+            <input type="email" name="mail" id="mail">
+       </div>
+        <!-- role="group" Група элементов -->
+       <div role="group" class="group"> 
+            <h2 class="group-title">Тема доклада</h2>
+
+            <ul class="topic-options">
+                <li>
+                    <input type="checkbox" name="topic" value="html" id="html">
+                    <label for="html">HTML</label>
+                </li>
+               <li>
+                    <input type="checkbox" name="topic" value="css" id="css">
+                    <label for="css">CSS</label>
+               </li>
+                <li>
+                    <input type="checkbox" name="topic" value="js" id="js">
+                    <label for="js">JavaScript</label>
+                </li>
+            </ul>
+       </div>
+       <div role="group" class="group">
+            <h2 class="group-title">Уравень вашей экспертизы</h2>
+            <ul class="experience-options">
+                <li>
+                    <input type="radio" name="experience" value="junior" id="junior">
+                    <label for="junior">Junior</label>
+                </li>
+                <li>
+                    <input type="radio" name="experience" value="middle" id="middle">
+                    <label for="middle">Middle</label>
+                </li>
+                <li>
+                    <input type="radio" name="experience" value="senior" id="senior">
+                    <label for="senior">Senior</label>
+                </li>
+            </ul>       
+       </div>
+
+       <div class="form-field">
+            <label for="date">Дата доклада</label>
+            <input type="datetime-local" name="date" id="date" class="date">
+       </div>
+       <div class="form-field">
+            <label for="pdf">Copy pdf</label>
+            <input type="file" name="pdf" id="pdf">
+       </div>      
+        <div class="form-field">
+            <label for="comment">Koments</label>
+            <textarea class="comment" name="comment" id="comment" rows="10"></textarea>
+        </div>      
+        <div class="form-field">
+            <input type="checkbox" name="policy" id="policy">
+            <label for="policy">Соглашаюсь</label>
+        </div>
+        
+        <button type="submit">Оставить заявку</button>
+    </form>
+    <script>
+    (() => {
+        document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+                e.preventDefault();
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`(${name}: ${value})`),
+                );
+            });
+    })();
+    </script>
 
     <!-- <div class="circle">
         <svg width="16" height="16">
@@ -259,7 +341,7 @@
         </svg>
     </div> -->
 
-    <div class="circle">
+    <!-- <div class="circle">
         <svg width="16" height="16">
             <use href="./images/symbol-defs.svg#icon-facebook"></use>
         </svg>
@@ -270,5 +352,22 @@
             <button>Закрыть</button>
         </div>
     </div>
+    <ul class="menu">
+        <li class="meni-item">
+            <a href="" class="menu-link">Комплектующие</a>
+        </li>
+        <li class="meni-item">
+            <a href="" class="menu-link">Товары для дома</a>
+        </li>
+        <li class="meni-item">
+            <a href="" class="menu-link">Бытовая техника</a>
+            <ul class="submenu">
+                <li><a href="">Холодильники</a></li>
+                <li><a href="">Плиты</a></li>
+                <li><a href="">Варочные панели</a></li>
+            </ul>
+        </li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum alias tempore quia fuga quibusdam officiis sit architecto in tenetur id fugit aperiam suscipit sunt ratione ea, eius quis quas quaerat nemo accusamus possimus illum qui porro! Sunt repellendus numquam aperiam sapiente unde voluptates quas! Laboriosam eos ea natus quibusdam!</p>
+    <button class="btn">Поделиться</button> -->
 </body>
-</html>

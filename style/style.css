@@ -464,20 +464,239 @@ body
     width: 100%;
     height: 100%;
     background-color: rgb(255, 166, 0, 0.5);
+    opacity: 1;
+    transform: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 .backdrop.is-hidden
 {
     opacity: 0;
     pointer-events: none;
 }
+.backdrop.is-hidden .modal
+{
+    transform: translate(-50%, -50%) scale(0.9);
+}
   .modal
   {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 
     min-height: 400px;
     min-width: 600px;
+    padding: 15px;
     background-color: #fff; 
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  /* --------------------------------- */
+
+  .menu
+  {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+  }
+  /* .meni-item
+  {
+    position: relative;
+    margin-right: 15px;
+    outline: 2px solid tomato;
+  }
+  .meni-item:hover .submenu
+  {
+    display: block;
+  } */
+  .menu-link
+  {
+    /* display: block;
+    padding: 10px 20px;
+
+    text-decoration: none;
+    background-color: teal;
+    color: white; */
+
+    outline: 1px solid black;
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: currentColor;
+  }
+  .menu-link::after
+  {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    /* opacity: 0; */
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link:hover::after
+  {
+    /* opacity: 1; */
+    transform: scaleX(1);
+  }
+/* .submenu
+{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    padding: 10px;
+
+    background-color: #ccc;
+
+    display: none;
+}
+.submenu a
+{
+    text-decoration: none;
+} */
+/* ------------------------------------ */
+.btn
+{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 10px 30px;
+    background-color: #008080;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    overflow: hidden;
+
+    /* transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn::before, .btn::after
+{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn::before
+{
+    margin-right: 5px;
+    background-color: red;
+    
+}
+.btn:hover::before,
+.btn:focus::before
+{
+    transform: translateY(-35px);
+}
+.btn::after
+{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(calc(-50% + 35px));
+    background-color: orange;
+}
+.btn:hover::after,
+.btn:focus::after
+{
+    transform: translateY(-50%);
+}
+
+.btn:hover,
+.btn:focus
+{
+    background-color: #d87093;
+}
+/*--------------form--------------------*/
+.form
+{
+    width: 600px;
+    outline: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.form-field
+{
+    /* outline: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-field label
+{
+   margin-bottom: 5px; 
+}
+.form-field input
+{
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 1px solid #44231d;
+}
+.form-field input::placeholder
+{
+    color: #44231d;
+}
+.group
+{
+    margin-bottom: 20px;
+}
+.group-title
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.topic-options, .experience-options
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.topic-options li
+{
+    display: flex;
+    align-items: center;
+}
+.topic-options input[type="checkbox"]
+{
+   
+}
+.topic-options label
+{
+    font-style: 20px;
+    margin-left: 10px;
+}
+.date
+{
+    border-color: red;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 20px 40px;
+    font-size: 20px;
+    color: green;
+    background-color: #d2c2bf;
+}
+
+.comment
+{
+    padding: 8px;
+}
