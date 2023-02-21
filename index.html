@@ -255,16 +255,19 @@
     <!-- form -->
     <form class="form js-speaker-form">
        <div class="form-field">
+            <input class="form-input" type="text" name="user-name" id="name" placeholder=" " autofocus>
             <label class="form-label" for="name">Имя</label>
-            <input class="form-input" type="text" name="user-name" id="name" placeholder="Иван Иванович" autofocus>
+            <span class="icon"></span>
        </div>        
        <div class="form-field">
-            <label for="tel">Телефон</label>
-            <input type="text" name="tel" id="tel">
+            <input class="form-input" type="text" name="tel" id="tel" placeholder=" ">
+            <label class="form-label" for="tel">Телефон</label>
+            <span class="icon"></span>
        </div>
        <div class="form-field">
-            <label for="mail">Почта</label>
-            <input type="email" name="mail" id="mail">
+            <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
+            <label class="form-label" for="mail">Почта</label>
+            <span class="icon"></span>
        </div>
         <!-- role="group" Група элементов -->
        <div role="group" class="group"> 
@@ -339,7 +342,7 @@
         <svg width="16" height="16">
             <use href="./images/symbol-defs.svg#icon-linkedin"></use>
         </svg>
-    </div> -->
+    </div>  -->
 
     <!-- <div class="circle">
         <svg width="16" height="16">
@@ -370,4 +373,70 @@
     </ul>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum alias tempore quia fuga quibusdam officiis sit architecto in tenetur id fugit aperiam suscipit sunt ratione ea, eius quis quas quaerat nemo accusamus possimus illum qui porro! Sunt repellendus numquam aperiam sapiente unde voluptates quas! Laboriosam eos ea natus quibusdam!</p>
     <button class="btn">Поделиться</button> -->
+    <br>
+    <form class="form js-speaker-form">
+        <div class="form-field">
+            <span class="icon"></span>
+            <label class="form-label" for="name">Имя</label>
+            <input class="form-input" type="text" name="user-name" id="name" placeholder=" " autofocus>             
+        </div>        
+        <div class="form-field">
+            <span class="icon"></span>
+            <label class="form-label" for="tel">Телефон</label>
+            <input class="form-input" type="text" name="tel" id="tel" placeholder=" ">            
+        </div>
+        <div class="form-field">
+            <span class="icon"></span>
+            <label class="form-label" for="mail">Почта</label>
+            <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">             
+        </div>
+    </form>
+    <br>
+    <form class="form">
+        <label class="form-field">
+            <input class="form-input" type="text" name="user-name" placeholder=" " autofocus>
+            <span class="form-label">Имя</span>
+            <span class="icon"></span>
+        </label>
+
+        <label class="form-field">
+            <input class="form-input" type="text" name="tel" placeholder=" ">
+            <span class="form-label">Телефон</span>
+            <span class="icon"></span>
+        </label>
+
+        <label class="form-field">
+            <input class="form-input" type="email" name="mail" placeholder=" ">
+            <span class="form-label">Почта</span>
+            <span class="icon"></span>
+        </label>
+        <button type="submit">Оставить заявку</button>
+    </form>
+    <br>
+    <form> 
+        <ul>
+            <li>
+                <label class="field">
+                    <input class="checkbox" type="checkbox" name="topic" value="html">
+                    <span class="icon"></span>
+                    <span class="lable">HTML</span>
+                </label>
+            </li>
+           <li>
+                <label class="field">
+                    <input class="checkbox" type="checkbox" name="topic" value="css">
+                    <span class="icon"></span>
+                    <span class="lable">CSS</span>
+                </label>
+           </li>
+            <li>
+                <label class="field">
+                    <input class="checkbox" type="checkbox" name="topic" value="js">
+                    <span class="icon"></span>
+                    <span class="lable">JavaScript</span>
+                </label>
+            </li>
+        </ul>
+        <button type="submit">Оставить заявку</button>
+   </form>
 </body>
